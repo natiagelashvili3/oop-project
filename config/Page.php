@@ -21,6 +21,11 @@ class Page {
         $page->renderView();
     }
 
+    public function getModel() {
+        $path = $this->getModelPath();
+        require_once $path;
+    }
+
     public function getControllerPath() {
         // controllers/HomeController.php
         // controllers/AboutController.php
@@ -30,12 +35,29 @@ class Page {
         return 'controllers/' . $name;
     }
 
+    public function getModelPath() {
+        // models/Home.php
+        // models/About.php
+        // models/Contact.php
+
+        $name = $this->getModelName() . '.php';
+        return 'models/' . $name;
+    }
+
     public function getControllerName() {
         // HomeController
         // AboutController
         // ContactConroller
 
         return ucfirst($this->pageName) . 'Controller' ;
+    }
+
+    public function getModelName() {
+        // Home
+        // About
+        // Contact
+
+        return ucfirst($this->pageName) . '' ;
     }
 
 }
