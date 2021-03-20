@@ -2,6 +2,6 @@
 
 use config\Model;
 
-class About extends Model {
+class News extends Model {
 
 }

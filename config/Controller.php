@@ -2,7 +2,7 @@
 
 namespace config;
 
-class Controller {
+abstract class Controller {
 
     public $page;
 
@@ -13,6 +13,8 @@ class Controller {
     public function __construct($pagename) {
         $this->page = $pagename;
     }
+
+    abstract public function index(); 
 
     public function renderView() {
 
