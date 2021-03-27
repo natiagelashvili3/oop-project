@@ -11,7 +11,7 @@ abstract class Controller {
     public $data = [];
 
     public function __construct($pagename) {
-        $this->page = $pagename;
+         $this->page = $pagename;
     }
 
     abstract public function index(); 

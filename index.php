@@ -1,5 +1,10 @@
 <?php
+    
+    ini_set('display_errors', 1); 
+    ini_set('display_startup_errors', 1); 
+    error_reporting(E_ALL);
 
+    require_once 'helpers/Helper.php';
     require_once 'config/Page.php';
     require_once 'config/Database.php';
     require_once 'config/Model.php';
@@ -9,6 +14,8 @@
     $page->getModel();
     $page->getContoller();
     
+
+    // აბსტრაქტული კლასები
 
     // abstract class controller {
 
@@ -41,5 +48,37 @@
 
     // $home = new home();
     // print_r( $home->renderView() );
+
+
+    // სტატიკური
+
+    // abstract class Test {
+
+    //     public static $name = 'george';
+
+    //     public function getString() {
+    //         return self::$name;
+    //     } 
+
+    //     abstract public function getNumber(); 
+    // }
+
+    // class test2 extends Test{
+    //     public function getNumber(){
+    //         return 1;
+    //     }
+    // }
+
+    // echo Test::$name; 
+
+    // $test = new test2();
+    // echo $test->getString();
+
+
+
+
+    // static method and propertis
+    // cont in class
+
 
     
