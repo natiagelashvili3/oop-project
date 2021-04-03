@@ -11,7 +11,7 @@ class Database
     protected $host = "localhost";
     protected $dbName = "oop";
     protected $username = "root";
-    protected $password = "";
+    protected $password = "admin123";
     public $pdo;
 
     public function __construct()

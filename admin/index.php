@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
+<?php
 
-	<div></div>
+	ini_set('display_errors', 1); 
+    ini_set('display_startup_errors', 1); 
+    error_reporting(E_ALL);
 
+    require_once '../helpers/Helper.php';
+	require_once '../helpers/Session.php';
+	require_once '../config/AdminPage.php';
+    require_once '../config/Database.php';
+    require_once '../config/Model.php';
+    require_once '../config/AdminController.php';
 
-</body>
-</html>
+	Session::start();
+
+    $page = new AdminPage($_GET);
+    
