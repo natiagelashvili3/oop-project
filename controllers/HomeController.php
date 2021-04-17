@@ -9,7 +9,7 @@ class HomeController extends Controller {
         $home = new Home();
         
         $this->data['menu'] = $home->getMenu();
-        $this->data['services'] = [];
+        $this->data['services'] = $home->getAllServices();
 
         $this->tpl = 'home';
     }

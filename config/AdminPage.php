@@ -30,7 +30,7 @@ class AdminPage {
 
         $pageName = $this->getControllerName();
 
-        $page = new $pageName($this->pageName);
+        $page = new $pageName($this->pageName, $_GET);
         $page->$action($_POST);
     }
 
@@ -41,7 +41,7 @@ class AdminPage {
 
         $pageName = $this->getControllerName();
 
-        $page = new $pageName($this->pageName);
+        $page = new $pageName($this->pageName, $_GET);
         $page->renderView();
     }
 

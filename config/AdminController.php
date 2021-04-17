@@ -10,15 +10,18 @@ abstract class AdminController {
 
     public $data = [];
 
-    public function __construct($pagename) {
-         $this->page = $pagename;
+    private $action;
+
+    public function __construct($pagename, $request) {
+        $this->page = $pagename;
+        $this->action = isset($request['action']) && $request['action'] ? $request['action'] : 'index'; 
     }
 
     abstract public function index(); 
 
     public function renderView() {
 
-        $this->index();
+        $this->{$this->action}();
 
         $tpl = $this->tpl;
 

@@ -4,6 +4,7 @@
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
 
+    require_once 'config/Config.php';
     require_once 'helpers/Helper.php';
     require_once 'config/Page.php';
     require_once 'config/Database.php';

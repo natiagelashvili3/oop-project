@@ -13,21 +13,13 @@
     <section class="section-2">
         <div class="container">
             <div class="home-services">
+                <?php foreach($data['services'] as $key => $value): ?>
                 <div class="service-item">
-                    <h3>Consulting</h3>
-                    <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod Lorem ipsum dolor sit ametelit.</p>
-                    <a href="" class="link-default-2">Read More</a>
+                    <h3><?= $value['name'] ?></h3>
+                    <p><?= $value['text'] ?></p>
+                    <!-- <a href="" class="link-default-2">Read More</a> -->
                 </div>
-                <div class="service-item">
-                    <h3>Finance</h3>
-                    <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod Lorem ipsum dolor sit ametelit.</p>
-                    <a href="" class="link-default-2">Read More</a>
-                </div>
-                <div class="service-item">
-                    <h3><?= Helper::convertString('Technology and summits') ?></h3>
-                    <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod Lorem ipsum dolor sit ametelit.</p>
-                    <a href="" class="link-default-2">Read More</a>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>

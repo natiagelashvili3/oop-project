@@ -8,10 +8,10 @@ use Exception;
 class Database
 {
 
-    protected $host = "localhost";
-    protected $dbName = "oop";
-    protected $username = "root";
-    protected $password = "admin123";
+    protected $host = DB_HOST;
+    protected $dbName = DB_TABLE;
+    protected $username = DB_USER;
+    protected $password = DB_PASS;
     public $pdo;
 
     public function __construct()

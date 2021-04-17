@@ -134,7 +134,24 @@ header ul li:last-child{
     border: 0;
     border-radius: 5px;
 	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
 }
 .btn:hover{
 	background-color: #366185;
+}
+
+table, td, th {  
+	border: 1px solid #ddd;
+	text-align: left;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td {
+	padding: 15px;
+}
+.table-container{
+	margin-top: 30px;
 }
