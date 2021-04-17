@@ -9,7 +9,11 @@
 <body>
 
     <form id="login-form" method="POST" action="/admin/login.php">
-
+        <?php
+            if(isset($_GET['u']) && $_GET['u'] == 0) {
+                echo "<p>Invalid Data</p>";
+            }
+        ?>
         <h2>Admin Login</h2>
 
         <input type="text" name="username" class="text-field" placeholder="Username" />

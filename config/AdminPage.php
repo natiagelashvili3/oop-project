@@ -8,15 +8,31 @@ class AdminPage {
 
         if(Session::get('user_id') == NULL) {
             $this->pageName = 'login';
+            $this->getContoller();
         } else {
             $this->pageName = isset($request['page']) && !empty($request['page']) 
                                                             ? $request['page'] 
                                                             : 'home';
-            $this->getModel();
-        }
 
-        $this->getContoller();
+            $this->getModel();
+            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $this->getPostMethod($_POST['action']);
+            } else {
+                $this->getContoller();
+            }
+        }
     } 
+
+    public function getPostMethod($action) {
+        $path = $this->getControllerPath();
+
+        require_once $path;
+
+        $pageName = $this->getControllerName();
+
+        $page = new $pageName($this->pageName);
+        $page->$action($_POST);
+    }
 
     public function getContoller() {
         $path = $this->getControllerPath();

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="/assets/admin_resourcecs/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/admin_resources/css/style.css">
 </head>
 <body>
 
@@ -11,9 +11,15 @@
 
 		include('common/header.php');
 
-		include('pages/'.$tpl.'.php')
-
 	?>
+
+	<div class="main">
+		<?php
+		
+			include('pages/'.$tpl.'.php')
+
+		?>
+	</div>
 
 
 </body>

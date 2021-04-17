@@ -1,3 +1,8 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 form#login-form {
 	width: 280px;
 	height: 260px;
@@ -69,4 +74,67 @@ form#login-form .button:active {
 	background: -ms-linear-gradient(bottom, #5BA7E9 0%, #4889C2 100%);
 	
 	box-shadow: inset 0 0 2px rgba(0,0,0, .3), 0 1px 0 white;
+}
+
+body{
+	background-color: #f8f9fe;
+}
+aside{
+	width: 250px;
+	height: 100vh;
+	background: white;
+	display: inline-block;
+	box-shadow: 0 0 2rem 0 rgb(136 152 170 / 15%);
+}
+header{
+	text-align: center;
+	margin-top: 60px;
+}
+header ul li{
+	padding: 10px 25px;
+	text-align: left;
+}
+header ul li a{
+	color: #40739e;
+	text-decoration: none;
+}
+header ul li:last-child{
+	border-top: 1px solid rgb(185, 185, 185);
+	margin-top: 60px;
+}
+.main{
+	display: inline-block;
+    width: calc(100% - 340px);
+    vertical-align: top;
+    padding: 60px 20px;
+}
+.admin-form{
+	width: 100%;
+}
+.admin-form .form-group{
+	margin-bottom: 20px;
+}
+.admin-form input,
+.admin-form textarea{
+	width: 100%;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background: white;
+	border: 1px solid rgb(228, 228, 228);
+	outline: none;
+}
+.admin-form textarea{
+	height: 250px;
+}
+
+.btn{
+	padding: 15px 20px;
+    background-color: #40739e;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+	cursor: pointer;
+}
+.btn:hover{
+	background-color: #366185;
 }

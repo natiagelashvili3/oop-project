@@ -2,7 +2,6 @@
     <section class="section-1" style="background-image: url('assets/images/img.jpg');">
         <div class="shadow"></div>
         <div class="content">
-            <p> <?= Helper::NAME ?> </p>
             <h1><?= Helper::convertString('Build your own website') ?></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

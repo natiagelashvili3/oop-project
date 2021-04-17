@@ -18,6 +18,8 @@
     if($id) {
         Session::set('user_id', $id);
         header('Location: /admin');
+    } else {
+        header('Location: /admin/?u=0');
     }
     
     

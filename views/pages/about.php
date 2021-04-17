@@ -2,10 +2,10 @@
     <section class="single-page-content">
         <div class="container">
             <h1>
-                <?= $data['title'] ?>
+                <?= $data['about']['title'] ?>
             </h1>
             <p>
-                <?= $data['text'] ?>
+                <?= $data['about']['text'] ?>
             </p>
         </div>
     </section>

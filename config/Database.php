@@ -28,6 +28,15 @@ class Database
         }
     }
 
+    public function run($query)
+    {
+        $data = [];
+
+        $sql = $this->pdo->prepare( $query );
+        $sql->execute();
+
+    }
+
     public function execute($query) {
         $data = [];
 
@@ -52,6 +61,23 @@ class Database
 
         while ( $row = $sql->fetch() ) {
             $data[] = $row;
+        }
+
+        return $data;
+
+    }
+
+    public function getSingle($tableName)
+    {
+        $data = [];
+
+        $query = "SELECT * FROM " . $tableName;
+
+        $sql = $this->pdo->prepare( $query );
+        $sql->execute();
+
+        while ( $row = $sql->fetch() ) {
+            $data = $row;
         }
 
         return $data;

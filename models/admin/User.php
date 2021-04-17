@@ -14,7 +14,7 @@ class User extends Model {
 
         $data = $this->execute($query);
 
-        return $data[0]['id'];
+        return $data ? $data[0]['id'] : null;
     }
 
 }
