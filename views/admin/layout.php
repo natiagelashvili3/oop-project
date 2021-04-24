@@ -21,6 +21,10 @@
 		?>
 	</div>
 
+	<script>
+		var siteUrl = '<?= HOST ?>';
+	</script>
+
 	<script src="<?= HOST ?>assets/admin_resources/js/script.js"></script>
 </body>
 </html>

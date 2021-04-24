@@ -14,7 +14,7 @@ for (let i = 0; i < btnDelete.length; i++) {
             data.append('id', id);
             data.append('action', 'delete');
 
-            request.open('POST', '/admin/?page=services');
+            request.open('POST', siteUrl + '/admin/?page=services');
             request.send(data);
             request.onload = function() {
                 if(request.status == 200) {
