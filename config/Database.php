@@ -67,6 +67,28 @@ class Database
 
     }
 
+    public function getById($tableName, $id)
+    {
+        $data = [];
+
+        $query = "SELECT * FROM " . $tableName . " WHERE id = ".$id;
+
+        $sql = $this->pdo->prepare( $query );
+        $sql->execute();
+
+        while ( $row = $sql->fetch() ) {
+            $data = $row;
+        }
+
+        return $data;
+
+    }
+
+    public function deleteById($tableName, $id) {
+        $query = "DELETE FROM ".$tableName." WHERE id = ".$id;
+        $this->run($query);
+    }
+
     public function getSingle($tableName)
     {
         $data = [];

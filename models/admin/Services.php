@@ -20,4 +20,17 @@ class Services extends Model {
         $this->run($query);
     }
     
+
+    public function updateService($data) {
+
+        $name = $data['name'];
+        $text = $data['text'];
+        $id   = $data['id'];
+
+        $query = "UPDATE services 
+                     SET name = '".$name."', text = '".$text."' WHERE id = " . $id;
+
+        $this->run($query);
+
+    }
 }

@@ -15,6 +15,7 @@ class AdminPage {
                                                             : 'home';
 
             $this->getModel();
+            
             if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $this->getPostMethod($_POST['action']);
             } else {

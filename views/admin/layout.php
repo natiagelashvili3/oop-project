@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="/assets/admin_resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?= HOST ?>assets/admin_resources/css/style.css">
 </head>
 <body>
 
@@ -21,6 +21,6 @@
 		?>
 	</div>
 
-
+	<script src="<?= HOST ?>assets/admin_resources/js/script.js"></script>
 </body>
 </html>

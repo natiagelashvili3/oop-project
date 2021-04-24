@@ -25,17 +25,38 @@ class ServicesController extends AdminController {
 
         $services->insertData($data);
 
-        header('Location: '.HOST.'/admin/?page=services');
+        header('Location: '.HOST.'admin/?page=services');
 
     }
 
     public function edit() {
 
-        print_r('this is an edi method');
+        $service = new Services();
+
+        $this->data['service'] = $service->getById('services', $_GET['id']);
+        
+        $this->tpl = 'services/edit';
     }
 
-    public function update() {}
+    public function update($data) {
+        
+        $service = new Services();
 
-    public function delete() {}
+        $service->updateService($data);
+
+        header('Location: '.HOST.'admin/?page=services');
+
+    }
+
+    public function delete($data) {
+
+        $service = new Services();
+
+        $service->deleteById('services', $data['id']);
+
+        echo 'ok';
+
+        //header('Location: '.HOST.'admin/?page=services');
+    }
 
 }

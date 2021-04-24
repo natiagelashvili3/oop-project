@@ -8,7 +8,7 @@
         <th>ID</th>
         <th>Name</th>
         <th>Text</th>
-        <th>Actions</th>
+        <th class="table-actions">Actions</th>
     </tr>
 
     <?php foreach($data['services'] as $key => $value) { ?>
@@ -17,8 +17,14 @@
             <td><?= $value['name'] ?></td>
             <td><?= $value['text'] ?></td>
             <td>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
+                <a class="btn-action btn-edit" href="<?= HOST . 'admin/?page=services&action=edit&id='.$value['id'] ?>">Edit</a>
+                <div>
+                    <a class="btn-action btn-delete" data-id="<?= $value['id'] ?>">Delete</a>
+                    <!-- <form method="post">
+                        <input type="hidden" name="action" value="delete">
+                        <input type="hidden" name="id" value="<?= $value['id'] ?>">
+                    </form> -->
+                </div>
             </td>
         </tr>
     <?php } ?>
