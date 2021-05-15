@@ -16,6 +16,47 @@
     $page->getContoller();
     
 
+
+    // class A {
+    //     function __construct() {
+    //         print_r('FROM A<br>');
+    //     }
+    
+    //     public function index() {
+    //         print_r('index-A<br>');
+    //     }
+    // }
+
+    // class B extends A {
+
+    //     function __construct() {
+    //         parent::__construct();
+    //         print_r('FROM B<br>');
+    //     }
+
+    //     public function index() {
+    //         print_r('index-B<br>');
+    //     }
+
+    //     public function parentIndex() {
+    //         parent::index();
+    //     }
+
+    // }
+
+    // // $a = new A();
+    // // $a->index();
+
+    // $b = new B();
+    // $b->index();
+    // $b->parentIndex();
+
+
+
+
+
+
+
     // აბსტრაქტული კლასები
 
     // abstract class controller {

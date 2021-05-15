@@ -193,3 +193,123 @@ footer{
 #contact-form textarea{
 	height: 150px;
 }
+
+
+
+/* News Style Start */
+
+.news-item-row{
+	width: 30%;
+	display: inline-block;
+	margin: 10px;
+}
+
+.news-section {
+  padding: 90px 0;
+}
+
+.news-content {
+  padding: 40px 30px;
+}
+
+.news-item {
+  box-shadow: 0 0 15px #ededed;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-bottom: 40px;
+}
+
+.news-item:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -webkit-box-shadow: 0px 15px 15px 0px #edeaea;
+  box-shadow: 0px 15px 15px 0px #edeaea;
+}
+
+.newsimg img {
+  width: 100%;
+}
+
+.news_postdate {
+  color: #ff3a46;
+}
+
+.news-content h3 {
+  color: #233d63;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.news_authorinfo {
+  border: transparent;
+  padding: 14px 0px 0px 0px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.news_authorinfo i {
+  margin-right: 6px;
+}
+
+.news_authorinfo span:last-child {
+  float: right;
+}
+
+.news_authorinfo a {
+  color: #666;
+}
+
+.center .news-content {
+  background: linear-gradient(-120deg, #8758ff 0, #614ef9 100%);
+}
+
+.center .news-content h3,
+.center .news-content p {
+  color: #fff;
+}
+
+.center .news_authorinfo a,
+.center .news_authorinfo i {
+  color: #fff;
+}
+
+.news-slide.owl-carousel .col-lg-4 {
+  max-width: 100%;
+  padding: 0;
+}
+
+.news-section .owl-theme .owl-nav [class*="owl-"] {
+  color: #333;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #fff;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.small-title {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #ff3a46;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-weight: 600;
+}
+.big-title {
+  letter-spacing: 0px;
+  padding-bottom: 13px;
+  position: relative;
+  color: #233d63;
+  line-height: 50px;
+  font-size: 36px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.main-title-box {
+  margin-bottom: 60px;
+}

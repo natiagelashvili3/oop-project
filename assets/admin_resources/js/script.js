@@ -7,14 +7,15 @@ for (let i = 0; i < btnDelete.length; i++) {
             // form.submit();
 
             let id = this.getAttribute('data-id');
-            
+            let pageName = this.getAttribute('data-page');
+
             let request = new XMLHttpRequest();
 
             let data = new FormData();
             data.append('id', id);
             data.append('action', 'delete');
 
-            request.open('POST', siteUrl + '/admin/?page=services');
+            request.open('POST', siteUrl + '/admin/?page='+pageName);
             request.send(data);
             request.onload = function() {
                 if(request.status == 200) {

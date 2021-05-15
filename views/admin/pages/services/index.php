@@ -19,7 +19,7 @@
             <td>
                 <a class="btn-action btn-edit" href="<?= HOST . 'admin/?page=services&action=edit&id='.$value['id'] ?>">Edit</a>
                 <div>
-                    <a class="btn-action btn-delete" data-id="<?= $value['id'] ?>">Delete</a>
+                    <a class="btn-action btn-delete" data-id="<?= $value['id'] ?>" data-page="services">Delete</a>
                     <!-- <form method="post">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="id" value="<?= $value['id'] ?>">
