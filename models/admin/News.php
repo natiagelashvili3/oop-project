@@ -14,14 +14,19 @@ class News extends Model {
 
         $fileName = '';
 
-        if(isset($_FILES) && isset($_FILES['image'])) {
-            $name = $_FILES['image']['name'];
-            $exp = explode('.', $name);
-            $extension = end($exp);
-            $name1 = $exp[0];
-            $fileName = $name1 . '-'.time().'.'.$extension;
-            $file_tmp =$_FILES['image']['tmp_name'];
-            move_uploaded_file($file_tmp, ROOT_URL."/assets/uploads/".$fileName);
+        if( isset($_FILES) && isset($_FILES['image']) ) {
+
+            // Version 1
+            $k =  explode('.', $_FILES['image']['name']);
+            $extension = array_pop($k);
+            $original_name = implode('.', $k);
+            $fileName = $original_name . '_' . time() . '.'. $extension;
+
+            // Version 2
+            // $fileName = time() . '_' . $_FILES['image']['name'];
+            $tmp_name = $_FILES['image']['tmp_name'];
+
+            move_uploaded_file($tmp_name, ROOT_URL.'/assets/uploads/'.$fileName);
         }
 
         $title = $data['title'];
