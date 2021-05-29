@@ -1,0 +1,13 @@
+{
+    "name": "natia/oop",
+    "authors": [
+        {
+            "name": "natiagelashvili",
+            "email": "natia.gelashvili@flatrocktech.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.4",
+        "dompdf/dompdf": "^1.0"
+    }
+}
